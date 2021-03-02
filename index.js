@@ -41,4 +41,4 @@ const getFirstElement = (array) => {
     }
 };
 
-module.exports = [findAvg, toCamelCase, getPercentage, formatPriceINR, getMobileFormat, GetFirstElement];
+module.exports = [findAvg, toCamelCase, getPercentage, formatPriceINR, getMobileFormat, getFirstElement];

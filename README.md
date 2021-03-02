@@ -4,12 +4,12 @@ You can find js utility functions here.
 
 ## Installation
 
-`npm i js-utils`
+`npm i js-util-methods`
 
 ## How to use ?
 
 ```
-    import { findAvg } from 'js-utils'
+    import { findAvg } from 'js-util-methods'
 
     findAvg([12, 13, 14, 15, 16, 17]);
 ```

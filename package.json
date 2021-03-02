@@ -1,6 +1,6 @@
 {
-  "name": "js-utils",
-  "version": "1.0.0",
+  "name": "js-util-methods",
+  "version": "1.0.1",
   "description": "js utility functions",
   "main": "index.js",
   "scripts": {
