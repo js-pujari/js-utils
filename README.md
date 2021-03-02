@@ -22,3 +22,11 @@ You can find js utility functions here.
 * formatPriceINR
 * getMobileFormat
 * getFirstElement
+* calculateDiscountPercentage
+* calculatePriceFromDiscount
+* getDobFromAge
+* getAgeFromDob
+* capitalizeFirstLetter
+* isEmpty
+* sortBy
+  
