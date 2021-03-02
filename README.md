@@ -1,6 +1,6 @@
 # What is this ?
 
-You can find js utility functions here.
+Lightweight, usefull, tiny size(<4kb), javascript package for commenly used utility functions.
 
 ## Installation
 
@@ -13,6 +13,10 @@ You can find js utility functions here.
 
     findAvg([12, 13, 14, 15, 16, 17]);
 ```
+
+For use in **typescript** projects follow the steps below.
+Create file with name **.d.ts** copy and paste below code in created file.
+`declare module 'js-util-methods';`
 
 ### What all utility functions there ?
 

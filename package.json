@@ -1,7 +1,7 @@
 {
   "name": "js-util-methods",
   "version": "1.0.3",
-  "description": "js utility functions",
+  "description": "Javascript usefull utility functions",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -12,7 +12,11 @@
   },
   "keywords": [
     "js-utils",
-    "utility-js"
+    "es6-utils",
+    "utility-js",
+    "format-price",
+    "es6-util-methods",
+    "js-util-methods"
   ],
   "author": "js-pujari",
   "license": "ISC",
