@@ -70,10 +70,12 @@ export const capitalizeFirstLetter = (str) => {
 };
 
 export const isEmpty = (obj) => {
-    if (obj) {
+    if (obj && !Array.isArray(obj)) {
         return (Object.keys(obj).length > 0) ? false : true;
+    } else if (obj && Array.isArray(obj)) {
+        return obj.length > 0 ? false : true;
     } else {
-        return true;
+        return true
     }
 };
 export const sortBy = (arr, compareType, sortType) => {
@@ -98,3 +100,82 @@ export const sortBy = (arr, compareType, sortType) => {
         return idx;
     });
 };
+
+export const uniqBy = (arr, predicate) => {
+    if (arr && Array.isArray(arr)) {
+        const callback = typeof predicate === 'function' ? predicate : (o) => o[predicate];
+
+        return [...arr.reduce((map, item) => {
+            const key = (item === null || item === undefined) ?
+                item : callback(item);
+
+            map.has(key) || map.set(key, item);
+
+            return map;
+        }, new Map()).values()];
+    } else {
+        return arr;
+    }
+
+};
+
+export const isArrHasElement = (arr, element) => {
+    if (Array.isArray(arr) && element)
+        return arr.indexOf(element) >= 0;
+    return false
+}
+
+export const isArrHasObject = (arr, obj, predicate) => {
+    if (Array.isArray(arr) && obj && typeof obj === 'object' && !isEmpty(obj) && predicate)
+        return arr.findIndex((item) => item[predicate] && obj[predicate] && item[predicate] === obj[predicate]) >= 0;
+    return false
+}
+
+export const groupBy = (arr, property) => {
+    if (Array.isArray(arr) && property) {
+        return arr.reduce((result, obj) => {
+            var key = obj[property];
+            if (!result[key]) {
+                result[key] = [];
+            }
+            result[key] = [...result[key], obj];
+            return result;
+        }, {});
+    } else {
+        return arr;
+    }
+}
+
+export const isValidObjProperty = (obj, property) => {
+    if (!obj.hasOwnProperty(property) || !obj[property])
+        return false
+    return true;
+}
+
+export const deleteObjProperty = (obj, property) => {
+    delete obj[property];
+    return obj
+}
+
+export const deepCopy = (obj) => {
+    if (null == obj || "object" != typeof obj || obj instanceof RegExp) return obj;
+    if (obj instanceof Date) {
+        var copy = new Date();
+        copy.setTime(obj.getTime());
+        return copy;
+    }
+    if (obj instanceof Array) {
+        var copy = [];
+        for (var i = 0, len = obj.length; i < len; i++) {
+            copy[i] = deepCopy(obj[i]);
+        }
+        return copy;
+    }
+    if (obj instanceof Object) {
+        var copy = {};
+        for (var attr in obj) {
+            if (obj.hasOwnProperty(attr)) copy[attr] = deepCopy(obj[attr]);
+        }
+        return copy;
+    }
+}
