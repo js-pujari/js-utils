@@ -34,7 +34,7 @@ findAvg([12, 13, 14, 15, 16, 17]);
 * isEmpty(object | array | null | undefined) => boolean
 * sortBy(array, compareType, sortType) => sorted array (orderBy also can be done)
 * uniqBy(arr, predicate) => arr
-* Ex. `const arr = [
+* Ex. ```const arr = [
         { name: 'Raj', age: 21 },
         { name: 'Tiwari', age: 20 },
         { name: 'Pujari', age: 20 }
@@ -43,9 +43,9 @@ findAvg([12, 13, 14, 15, 16, 17]);
     [
         { name: 'Raj', age: 21 }
         { name: 'Tiwari', age: 20 }
-    ],
+    ]```
 * groupBy(arr, property) => grouped obj
-* Ex. `const arr = [
+* Ex. ```const arr = [
         { name: 'Raj', age: 21 },
         { name: 'Tiwari', age: 20 },
         { name: 'Pujari', age: 20 }
@@ -57,7 +57,7 @@ findAvg([12, 13, 14, 15, 16, 17]);
         { name: 'Pujari', age: 20 }
       ],
       21: [{ name: 'Raj', age: 21 }]
-    }`
+    }```
 * deepCopy(obj) => deepcopied Object (Works better than `JSON.parse(JSON.stringify(obj))`)
 * deleteObjProperty(obj, property) => obj
 * isValidObjProperty(obj, property) => boolean
