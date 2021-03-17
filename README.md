@@ -14,6 +14,9 @@ import { findAvg } from 'js-util-methods'
 findAvg([12, 13, 14, 15, 16, 17]);
 ```
 
+* For static server to serve your static build folder use package with (< kb) size.
+  [ind-js-server](https://www.npmjs.com/package/ind-js-server).
+  
 * For use in **typescript** projects follow the steps below.
 * Create file with name **.d.ts** copy and paste below code in created file.
 * `declare module 'js-util-methods';`
